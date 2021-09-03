@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14A13DE926E25B8D001AF805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DE826E25B8D001AF805 /* AppDelegate.swift */; };
+		14A13DEB26E25B8D001AF805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */; };
+		14A13DED26E25B8D001AF805 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DEC26E25B8D001AF805 /* ViewController.swift */; };
+		14A13DF026E25B8D001AF805 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A13DEE26E25B8D001AF805 /* Main.storyboard */; };
+		14A13DF226E25B8E001AF805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14A13DF126E25B8E001AF805 /* Assets.xcassets */; };
+		14A13DF526E25B8E001AF805 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14A13DF326E25B8E001AF805 /* LaunchScreen.storyboard */; };
+		14A13E0026E25B8E001AF805 /* TopTekkarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DFF26E25B8E001AF805 /* TopTekkarTests.swift */; };
+		14A13E0B26E25B8E001AF805 /* TopTekkarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13E0A26E25B8E001AF805 /* TopTekkarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14A13DFC26E25B8E001AF805 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A13DDD26E25B8D001AF805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14A13DE426E25B8D001AF805;
+			remoteInfo = TopTekkar;
+		};
+		14A13E0726E25B8E001AF805 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A13DDD26E25B8D001AF805 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14A13DE426E25B8D001AF805;
+			remoteInfo = TopTekkar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14A13DE526E25B8D001AF805 /* TopTekkar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTekkar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A13DE826E25B8D001AF805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14A13DEC26E25B8D001AF805 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14A13DEF26E25B8D001AF805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14A13DF126E25B8E001AF805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14A13DF426E25B8E001AF805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14A13DF626E25B8E001AF805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A13DFB26E25B8E001AF805 /* TopTekkarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopTekkarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A13DFF26E25B8E001AF805 /* TopTekkarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTekkarTests.swift; sourceTree = "<group>"; };
+		14A13E0126E25B8E001AF805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A13E0626E25B8E001AF805 /* TopTekkarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopTekkarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A13E0A26E25B8E001AF805 /* TopTekkarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTekkarUITests.swift; sourceTree = "<group>"; };
+		14A13E0C26E25B8E001AF805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14A13DE226E25B8D001AF805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13DF826E25B8E001AF805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13E0326E25B8E001AF805 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14A13DDC26E25B8D001AF805 = {
+			isa = PBXGroup;
+			children = (
+				14A13DE726E25B8D001AF805 /* TopTekkar */,
+				14A13DFE26E25B8E001AF805 /* TopTekkarTests */,
+				14A13E0926E25B8E001AF805 /* TopTekkarUITests */,
+				14A13DE626E25B8D001AF805 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14A13DE626E25B8D001AF805 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A13DE526E25B8D001AF805 /* TopTekkar.app */,
+				14A13DFB26E25B8E001AF805 /* TopTekkarTests.xctest */,
+				14A13E0626E25B8E001AF805 /* TopTekkarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A13DE726E25B8D001AF805 /* TopTekkar */ = {
+			isa = PBXGroup;
+			children = (
+				14A13DE826E25B8D001AF805 /* AppDelegate.swift */,
+				14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */,
+				14A13DEC26E25B8D001AF805 /* ViewController.swift */,
+				14A13DEE26E25B8D001AF805 /* Main.storyboard */,
+				14A13DF126E25B8E001AF805 /* Assets.xcassets */,
+				14A13DF326E25B8E001AF805 /* LaunchScreen.storyboard */,
+				14A13DF626E25B8E001AF805 /* Info.plist */,
+			);
+			path = TopTekkar;
+			sourceTree = "<group>";
+		};
+		14A13DFE26E25B8E001AF805 /* TopTekkarTests */ = {
+			isa = PBXGroup;
+			children = (
+				14A13DFF26E25B8E001AF805 /* TopTekkarTests.swift */,
+				14A13E0126E25B8E001AF805 /* Info.plist */,
+			);
+			path = TopTekkarTests;
+			sourceTree = "<group>";
+		};
+		14A13E0926E25B8E001AF805 /* TopTekkarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				14A13E0A26E25B8E001AF805 /* TopTekkarUITests.swift */,
+				14A13E0C26E25B8E001AF805 /* Info.plist */,
+			);
+			path = TopTekkarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14A13DE426E25B8D001AF805 /* TopTekkar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A13E0F26E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkar" */;
+			buildPhases = (
+				14A13DE126E25B8D001AF805 /* Sources */,
+				14A13DE226E25B8D001AF805 /* Frameworks */,
+				14A13DE326E25B8D001AF805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopTekkar;
+			productName = TopTekkar;
+			productReference = 14A13DE526E25B8D001AF805 /* TopTekkar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14A13DFA26E25B8E001AF805 /* TopTekkarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A13E1226E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkarTests" */;
+			buildPhases = (
+				14A13DF726E25B8E001AF805 /* Sources */,
+				14A13DF826E25B8E001AF805 /* Frameworks */,
+				14A13DF926E25B8E001AF805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14A13DFD26E25B8E001AF805 /* PBXTargetDependency */,
+			);
+			name = TopTekkarTests;
+			productName = TopTekkarTests;
+			productReference = 14A13DFB26E25B8E001AF805 /* TopTekkarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14A13E0526E25B8E001AF805 /* TopTekkarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A13E1526E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkarUITests" */;
+			buildPhases = (
+				14A13E0226E25B8E001AF805 /* Sources */,
+				14A13E0326E25B8E001AF805 /* Frameworks */,
+				14A13E0426E25B8E001AF805 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14A13E0826E25B8E001AF805 /* PBXTargetDependency */,
+			);
+			name = TopTekkarUITests;
+			productName = TopTekkarUITests;
+			productReference = 14A13E0626E25B8E001AF805 /* TopTekkarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14A13DDD26E25B8D001AF805 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					14A13DE426E25B8D001AF805 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					14A13DFA26E25B8E001AF805 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 14A13DE426E25B8D001AF805;
+					};
+					14A13E0526E25B8E001AF805 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 14A13DE426E25B8D001AF805;
+					};
+				};
+			};
+			buildConfigurationList = 14A13DE026E25B8D001AF805 /* Build configuration list for PBXProject "TopTekkar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14A13DDC26E25B8D001AF805;
+			productRefGroup = 14A13DE626E25B8D001AF805 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14A13DE426E25B8D001AF805 /* TopTekkar */,
+				14A13DFA26E25B8E001AF805 /* TopTekkarTests */,
+				14A13E0526E25B8E001AF805 /* TopTekkarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14A13DE326E25B8D001AF805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A13DF526E25B8E001AF805 /* LaunchScreen.storyboard in Resources */,
+				14A13DF226E25B8E001AF805 /* Assets.xcassets in Resources */,
+				14A13DF026E25B8D001AF805 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13DF926E25B8E001AF805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13E0426E25B8E001AF805 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14A13DE126E25B8D001AF805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A13DED26E25B8D001AF805 /* ViewController.swift in Sources */,
+				14A13DE926E25B8D001AF805 /* AppDelegate.swift in Sources */,
+				14A13DEB26E25B8D001AF805 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13DF726E25B8E001AF805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A13E0026E25B8E001AF805 /* TopTekkarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A13E0226E25B8E001AF805 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A13E0B26E25B8E001AF805 /* TopTekkarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14A13DFD26E25B8E001AF805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14A13DE426E25B8D001AF805 /* TopTekkar */;
+			targetProxy = 14A13DFC26E25B8E001AF805 /* PBXContainerItemProxy */;
+		};
+		14A13E0826E25B8E001AF805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14A13DE426E25B8D001AF805 /* TopTekkar */;
+			targetProxy = 14A13E0726E25B8E001AF805 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14A13DEE26E25B8D001AF805 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A13DEF26E25B8D001AF805 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14A13DF326E25B8E001AF805 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14A13DF426E25B8E001AF805 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14A13E0D26E25B8E001AF805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14A13E0E26E25B8E001AF805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14A13E1026E25B8E001AF805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14A13E1126E25B8E001AF805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14A13E1326E25B8E001AF805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TopTekkar.app/TopTekkar";
+			};
+			name = Debug;
+		};
+		14A13E1426E25B8E001AF805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TopTekkar.app/TopTekkar";
+			};
+			name = Release;
+		};
+		14A13E1626E25B8E001AF805 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TopTekkar;
+			};
+			name = Debug;
+		};
+		14A13E1726E25B8E001AF805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TopTekkarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tes.TopTekkarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TopTekkar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A13DE026E25B8D001AF805 /* Build configuration list for PBXProject "TopTekkar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A13E0D26E25B8E001AF805 /* Debug */,
+				14A13E0E26E25B8E001AF805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A13E0F26E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A13E1026E25B8E001AF805 /* Debug */,
+				14A13E1126E25B8E001AF805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A13E1226E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A13E1326E25B8E001AF805 /* Debug */,
+				14A13E1426E25B8E001AF805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A13E1526E25B8E001AF805 /* Build configuration list for PBXNativeTarget "TopTekkarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A13E1626E25B8E001AF805 /* Debug */,
+				14A13E1726E25B8E001AF805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14A13DDD26E25B8D001AF805 /* Project object */;
+}
