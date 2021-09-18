@@ -107,8 +107,8 @@ extension SearchCategoriesVC :UICollectionViewDelegate,UICollectionViewDataSourc
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "search", sender: self)
-        
+        performSegue(withIdentifier: "AcadamyList", sender: self)
+
         
     }
     

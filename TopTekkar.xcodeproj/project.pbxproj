@@ -21,10 +21,8 @@
 		147653B226E5412F0090395B /* SearchCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147653B126E5412F0090395B /* SearchCategory.storyboard */; };
 		147653C226E6A8460090395B /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147653C126E6A8460090395B /* APIHandler.swift */; };
 		1478D3AE26EC9CB700EA66D1 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3AD26EC9CB700EA66D1 /* AppConstants.swift */; };
-		1478D3C326ECF46200EA66D1 /* VenueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3C126ECF46200EA66D1 /* VenueVC.swift */; };
-		1478D3C426ECF46200EA66D1 /* VenueVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1478D3C226ECF46200EA66D1 /* VenueVC.xib */; };
-		1478D3D326ECF53B00EA66D1 /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3D226ECF53B00EA66D1 /* VenueViewModel.swift */; };
-		1478D3DC26ECF57000EA66D1 /* VenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3DB26ECF57000EA66D1 /* VenueModel.swift */; };
+		1478D3C326ECF46200EA66D1 /* AcademyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3C126ECF46200EA66D1 /* AcademyListViewController.swift */; };
+		1478D3DC26ECF57000EA66D1 /* AcadamyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478D3DB26ECF57000EA66D1 /* AcadamyListModel.swift */; };
 		14A13DE926E25B8D001AF805 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DE826E25B8D001AF805 /* AppDelegate.swift */; };
 		14A13DEB26E25B8D001AF805 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */; };
 		14A13DED26E25B8D001AF805 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13DEC26E25B8D001AF805 /* NotificationVC.swift */; };
@@ -37,6 +35,9 @@
 		14A13E3E26E26435001AF805 /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13E3D26E26435001AF805 /* BookingVC.swift */; };
 		4878D2570933A03DEF33F0BE /* Pods_TopTekkar_TopTekkarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */; };
 		934DED48D38067844D3B282E /* Pods_TopTekkarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11EF24652C3BC7C7F1FF85 /* Pods_TopTekkarTests.framework */; };
+		A384078026F61EEF00ACDA2C /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384077F26F61EEF00ACDA2C /* main.storyboard */; };
+		A384078626F6303A00ACDA2C /* AcadamyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384078526F6303A00ACDA2C /* AcadamyListViewModel.swift */; };
+		A384078826F64EC900ACDA2C /* AcadamyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384078726F64EC900ACDA2C /* AcadamyDetailViewController.swift */; };
 		C652CAFBE57C18D83A973323 /* Pods_TopTekkar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE43B6AEDE1CC0126D119C48 /* Pods_TopTekkar.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,10 +74,8 @@
 		147653B126E5412F0090395B /* SearchCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchCategory.storyboard; sourceTree = "<group>"; };
 		147653C126E6A8460090395B /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		1478D3AD26EC9CB700EA66D1 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		1478D3C126ECF46200EA66D1 /* VenueVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueVC.swift; sourceTree = "<group>"; };
-		1478D3C226ECF46200EA66D1 /* VenueVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueVC.xib; sourceTree = "<group>"; };
-		1478D3D226ECF53B00EA66D1 /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
-		1478D3DB26ECF57000EA66D1 /* VenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueModel.swift; sourceTree = "<group>"; };
+		1478D3C126ECF46200EA66D1 /* AcademyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademyListViewController.swift; sourceTree = "<group>"; };
+		1478D3DB26ECF57000EA66D1 /* AcadamyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcadamyListModel.swift; sourceTree = "<group>"; };
 		14A13DE526E25B8D001AF805 /* TopTekkar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopTekkar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14A13DE826E25B8D001AF805 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +96,9 @@
 		716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopTekkar_TopTekkarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E44C9FAC6644EA0DF9193DF /* Pods-TopTekkar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.debug.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.debug.xcconfig"; sourceTree = "<group>"; };
 		971BA313C40982A7A9AE688E /* Pods-TopTekkar-TopTekkarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar-TopTekkarUITests/Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A384077F26F61EEF00ACDA2C /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		A384078526F6303A00ACDA2C /* AcadamyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AcadamyListViewModel.swift; path = ../../../../Documents/AcadamyListViewModel.swift; sourceTree = "<group>"; };
+		A384078726F64EC900ACDA2C /* AcadamyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcadamyDetailViewController.swift; sourceTree = "<group>"; };
 		ACAEA3B6F6DE9E5C70C00CF5 /* Pods-TopTekkar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.release.xcconfig"; sourceTree = "<group>"; };
 		B54E15C2E1E79366CD93039E /* Pods-TopTekkarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkarTests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkarTests/Pods-TopTekkarTests.release.xcconfig"; sourceTree = "<group>"; };
 		C23B1A2EA946E961C89660C9 /* Pods-TopTekkarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkarTests.debug.xcconfig"; path = "Target Support Files/Pods-TopTekkarTests/Pods-TopTekkarTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -256,39 +258,20 @@
 			path = TopTekkar/SearchCategories;
 			sourceTree = SOURCE_ROOT;
 		};
-		1478D3C026ECF46200EA66D1 /* VenueScreen */ = {
+		1478D3CE26ECF4CE00EA66D1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				1478D3E026ECF57600EA66D1 /* Model */,
-				1478D3CE26ECF4CE00EA66D1 /* View */,
-				1478D3D726ECF55500EA66D1 /* ViewModel */,
+				A384077F26F61EEF00ACDA2C /* main.storyboard */,
 			);
-			path = VenueScreen;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		1478D3CE26ECF4CE00EA66D1 /* View */ = {
+		1478D3E026ECF57600EA66D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1478D3C226ECF46200EA66D1 /* VenueVC.xib */,
-				1478D3C126ECF46200EA66D1 /* VenueVC.swift */,
+				1478D3DB26ECF57000EA66D1 /* AcadamyListModel.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1478D3D726ECF55500EA66D1 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1478D3D226ECF53B00EA66D1 /* VenueViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		1478D3E026ECF57600EA66D1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1478D3DB26ECF57000EA66D1 /* VenueModel.swift */,
-			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		14A13DDC26E25B8D001AF805 = {
@@ -321,7 +304,10 @@
 				1478D3AD26EC9CB700EA66D1 /* AppConstants.swift */,
 				14A13DEC26E25B8D001AF805 /* NotificationVC.swift */,
 				14A13E3326E26158001AF805 /* TTBaseViewController.swift */,
-				1478D3C026ECF46200EA66D1 /* VenueScreen */,
+				A384078126F628A300ACDA2C /* Controllers */,
+				1478D3E026ECF57600EA66D1 /* Models */,
+				1478D3CE26ECF4CE00EA66D1 /* Storyboards */,
+				A384078226F6295D00ACDA2C /* View Models */,
 				1476539E26E53F910090395B /* SearchCategories */,
 				14633BC926E3F618008B514F /* HomeScreen */,
 				14A13E3D26E26435001AF805 /* BookingVC.swift */,
@@ -349,6 +335,23 @@
 				14A13E0C26E25B8E001AF805 /* Info.plist */,
 			);
 			path = TopTekkarUITests;
+			sourceTree = "<group>";
+		};
+		A384078126F628A300ACDA2C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1478D3C126ECF46200EA66D1 /* AcademyListViewController.swift */,
+				A384078726F64EC900ACDA2C /* AcadamyDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A384078226F6295D00ACDA2C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A384078526F6303A00ACDA2C /* AcadamyListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A8501392FC3C257AF7D0AA34 /* Pods */ = {
@@ -482,9 +485,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1478D3C426ECF46200EA66D1 /* VenueVC.xib in Resources */,
 				147653B226E5412F0090395B /* SearchCategory.storyboard in Resources */,
 				1476539126E510EE0090395B /* HomeCollectionViewCell.xib in Resources */,
+				A384078026F61EEF00ACDA2C /* main.storyboard in Resources */,
 				14A13DF526E25B8E001AF805 /* LaunchScreen.storyboard in Resources */,
 				14633C0026E401EA008B514F /* HomeTableviewCell.xib in Resources */,
 				14A13DF226E25B8E001AF805 /* Assets.xcassets in Resources */,
@@ -617,14 +620,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A13E3E26E26435001AF805 /* BookingVC.swift in Sources */,
+				A384078626F6303A00ACDA2C /* AcadamyListViewModel.swift in Sources */,
 				147653A026E53F910090395B /* SearchCategoriesVC.swift in Sources */,
 				14A13DED26E25B8D001AF805 /* NotificationVC.swift in Sources */,
 				14633BD526E3F643008B514F /* HomeViewModel.swift in Sources */,
 				14A13E3926E263FA001AF805 /* HomeVC.swift in Sources */,
-				1478D3C326ECF46200EA66D1 /* VenueVC.swift in Sources */,
-				1478D3DC26ECF57000EA66D1 /* VenueModel.swift in Sources */,
+				1478D3C326ECF46200EA66D1 /* AcademyListViewController.swift in Sources */,
+				1478D3DC26ECF57000EA66D1 /* AcadamyListModel.swift in Sources */,
 				147653AD26E540FE0090395B /* SearchCategoriesViewModel.swift in Sources */,
 				14633BDA26E3F655008B514F /* HomeModel.swift in Sources */,
+				A384078826F64EC900ACDA2C /* AcadamyDetailViewController.swift in Sources */,
 				147653C226E6A8460090395B /* APIHandler.swift in Sources */,
 				1476539026E510EE0090395B /* HomeCollectionViewCell.swift in Sources */,
 				14A13DE926E25B8D001AF805 /* AppDelegate.swift in Sources */,
@@ -633,7 +638,6 @@
 				14633BFF26E401EA008B514F /* HomeTableviewCell.swift in Sources */,
 				14A13E3426E26158001AF805 /* TTBaseViewController.swift in Sources */,
 				1430666826E800D200020CB9 /* SearchCategoryCollectionViewCell.swift in Sources */,
-				1478D3D326ECF53B00EA66D1 /* VenueViewModel.swift in Sources */,
 				147653A526E540090090395B /* SearchCategoriesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
