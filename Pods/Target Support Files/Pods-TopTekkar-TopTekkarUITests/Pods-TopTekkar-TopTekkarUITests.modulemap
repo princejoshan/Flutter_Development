@@ -1,0 +1,6 @@
+framework module Pods_TopTekkar_TopTekkarUITests {
+  umbrella header "Pods-TopTekkar-TopTekkarUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

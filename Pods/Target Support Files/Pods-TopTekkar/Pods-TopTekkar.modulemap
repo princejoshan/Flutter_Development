@@ -1,0 +1,6 @@
+framework module Pods_TopTekkar {
+  umbrella header "Pods-TopTekkar-umbrella.h"
+
+  export *
+  module * { export * }
+}
