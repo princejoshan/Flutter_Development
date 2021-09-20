@@ -25,8 +25,6 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
                 self.venueTableView.reloadData()
             }
         }
-
-        // Do any additional setup after loading the view.
     }
 
     
@@ -53,7 +51,6 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
                 }
             }
         }
-
         bus_Title.text = self.acadamyListData![indexPath.row].busTitle
         bus_GoogleStreet.text = self.acadamyListData![indexPath.row].busGoogleStreet
 
@@ -62,10 +59,16 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "AcadamyDetails", sender: self)
-
+        self.performSegue(withIdentifier:"AcadamyDetails", sender: self.acadamyListData![indexPath.row])
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AcadamyDetails"  {
+          let  vc = segue.destination as! AcadamyDetailsViewController
+            vc.acadamyDetails  = sender as? AcadamyDetails
+       }
+    }
+
     /*
      /Users/murugesh/Desktop/TopTekkar/TopTekkar/VenueScreen    // MARK: - Navigation
 
