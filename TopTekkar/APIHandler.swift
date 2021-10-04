@@ -13,8 +13,7 @@ class APIHandler {
 
     func sendRequest<T:Decodable>(url: String, parameters: [String: String]?, decoder:T.Type, completion: @escaping (Any, Error?) -> Void){
 
-        
-        AF.request(url,method: .post).responseDecodable(of: decoder,queue: .main, decoder: JSONDecoder()) { response in
+        AF.request(url,method: .post, parameters: parameters).responseDecodable(of: decoder,queue: .main, decoder: JSONDecoder()) { response in
             switch response.result {
             case let .success(data):
                 // success
