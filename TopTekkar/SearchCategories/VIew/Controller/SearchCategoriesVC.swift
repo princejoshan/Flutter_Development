@@ -12,9 +12,11 @@ class SearchCategoriesVC: UIViewController {
     var searchMode: SearchCategoriesModel!
     var searchViewModel = SearchCategoriesViewModel()
     var category:[SearchCategoriesDataModel]?
+    var selectedCategory:SearchCategoriesDataModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.searchCategoryCollectionView.collectionViewLayout = getCollectionLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,13 +32,20 @@ class SearchCategoriesVC: UIViewController {
         self.searchViewModel.bindingData = {
             if let data = self.searchViewModel.categoryData{
                 self.category = self.searchViewModel.categoryData
-                self.searchCategoryCollectionView.reloadData()
+                DispatchQueue.main.async {
+                    self.searchCategoryCollectionView.reloadData()
+                }
             }
         }
      
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AcadamyList" {
+               let vc = segue.destination as! AcademyListViewController
+               vc.selectedCategory = self.selectedCategory
+           }
+    }
     
 
     /*
@@ -53,6 +62,16 @@ class SearchCategoriesVC: UIViewController {
 
 
 extension SearchCategoriesVC :UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    func getCollectionLayout() -> UICollectionViewFlowLayout{
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+              layout.sectionInset = UIEdgeInsets(top: 20, left: 5, bottom: 10, right: 5)
+              layout.itemSize = CGSize(width: (UIScreen.main.bounds.width/2)-10, height: 60)
+              layout.minimumInteritemSpacing = 5
+              layout.minimumLineSpacing = 5
+        return layout
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.category?.count ?? 0
     }
@@ -60,25 +79,6 @@ extension SearchCategoriesVC :UICollectionViewDelegate,UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.searchCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "SearchCategoryCollectionViewCell", for: indexPath) as? SearchCategoryCollectionViewCell
         
-        var image: UIImage!
-        var text:String!
-        switch indexPath.row {
-        case 0:
-            image = UIImage(named: "banner1.png")
-            text = "Cricket"
-        case 1:
-            image = UIImage(named: "banner2.png")
-            text = "Table Tennis"
-        case 2:
-            image =  UIImage(named: "banner3.png")
-            text = "Carrom"
-
-        case 3:
-            image =  UIImage(named: "banner4.png")
-            text = "Foot Ball"
-        default:
-            image = UIImage()
-        }
 //        cell?.categoryImg.image = self.category?[indexPath.row].i
         if let imageName = self.category?[indexPath.row].image {
             let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.categoryAPI+imageName
@@ -107,6 +107,18 @@ extension SearchCategoriesVC :UICollectionViewDelegate,UICollectionViewDataSourc
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.selectedCategory = self.category?[indexPath.row]
+        
+       
+        if let category = self.selectedCategory {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(category) {
+                let defaults = UserDefaults.standard
+                defaults.set(encoded, forKey: "selectedCategory")
+            }
+        }
+
         performSegue(withIdentifier: "AcadamyList", sender: self)
 
         

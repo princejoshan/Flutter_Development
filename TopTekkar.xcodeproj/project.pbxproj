@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1430666826E800D200020CB9 /* SearchCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1430666726E800D200020CB9 /* SearchCategoryCollectionViewCell.swift */; };
+		1462213826FE4C3100FF2A50 /* TimeSlotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1462213726FE4C3100FF2A50 /* TimeSlotModel.swift */; };
 		14633BD526E3F643008B514F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14633BD426E3F643008B514F /* HomeViewModel.swift */; };
 		14633BDA26E3F655008B514F /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14633BD926E3F655008B514F /* HomeModel.swift */; };
 		14633BF126E3FE01008B514F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14633BF026E3FE01008B514F /* Home.storyboard */; };
 		14633BFF26E401EA008B514F /* HomeTableviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14633BFD26E401EA008B514F /* HomeTableviewCell.swift */; };
 		14633C0026E401EA008B514F /* HomeTableviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14633BFE26E401EA008B514F /* HomeTableviewCell.xib */; };
+		1464033026F924480033CCAE /* BookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464032F26F924480033CCAE /* BookingTableViewCell.swift */; };
+		1464033526F924900033CCAE /* BookingTurfCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1464033426F924900033CCAE /* BookingTurfCollectionViewCell.swift */; };
 		1472453026F9C0D10092C5C4 /* AcadamyDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472452B26F9C0D10092C5C4 /* AcadamyDetailViewModel.swift */; };
 		1472453126F9C0D10092C5C4 /* AcadamySportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472452D26F9C0D10092C5C4 /* AcadamySportsModel.swift */; };
 		1472453226F9C0D10092C5C4 /* AcadamyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472452F26F9C0D10092C5C4 /* AcadamyDetailsViewController.swift */; };
@@ -36,9 +39,15 @@
 		14A13E3426E26158001AF805 /* TTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13E3326E26158001AF805 /* TTBaseViewController.swift */; };
 		14A13E3926E263FA001AF805 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13E3826E263FA001AF805 /* HomeVC.swift */; };
 		14A13E3E26E26435001AF805 /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A13E3D26E26435001AF805 /* BookingVC.swift */; };
+		14A23F3926FA01D90092CB0E /* SportsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A23F3826FA01D90092CB0E /* SportsListCollectionViewCell.swift */; };
+		14A23F3E26FA64350092CB0E /* TimeSlotCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A23F3D26FA64350092CB0E /* TimeSlotCollectionViewCell.swift */; };
+		14AD339326F74C8200F53DE0 /* BookingScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD339226F74C8200F53DE0 /* BookingScreenVC.swift */; };
+		14AD33A026F74CB200F53DE0 /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD339F26F74CB200F53DE0 /* BookingModel.swift */; };
+		14AD33AF26F74CED00F53DE0 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AD33AE26F74CED00F53DE0 /* Booking.storyboard */; };
+		14AD33B526F74D1D00F53DE0 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD33B426F74D1D00F53DE0 /* BookingViewModel.swift */; };
 		4878D2570933A03DEF33F0BE /* Pods_TopTekkar_TopTekkarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */; };
 		934DED48D38067844D3B282E /* Pods_TopTekkarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11EF24652C3BC7C7F1FF85 /* Pods_TopTekkarTests.framework */; };
-		A384078026F61EEF00ACDA2C /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384077F26F61EEF00ACDA2C /* main.storyboard */; };
+		A384078026F61EEF00ACDA2C /* Academy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384077F26F61EEF00ACDA2C /* Academy.storyboard */; };
 		A384078A26F6650800ACDA2C /* AcadamyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384078926F6650800ACDA2C /* AcadamyListViewModel.swift */; };
 		C652CAFBE57C18D83A973323 /* Pods_TopTekkar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE43B6AEDE1CC0126D119C48 /* Pods_TopTekkar.framework */; };
 /* End PBXBuildFile section */
@@ -63,11 +72,14 @@
 /* Begin PBXFileReference section */
 		08D9CFA876590F1E53DF6556 /* Pods-TopTekkar-TopTekkarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar-TopTekkarUITests.debug.xcconfig"; path = "Target Support Files/Pods-TopTekkar-TopTekkarUITests/Pods-TopTekkar-TopTekkarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1430666726E800D200020CB9 /* SearchCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1462213726FE4C3100FF2A50 /* TimeSlotModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotModel.swift; sourceTree = "<group>"; };
 		14633BD426E3F643008B514F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		14633BD926E3F655008B514F /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		14633BF026E3FE01008B514F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		14633BFD26E401EA008B514F /* HomeTableviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableviewCell.swift; sourceTree = "<group>"; };
 		14633BFE26E401EA008B514F /* HomeTableviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableviewCell.xib; sourceTree = "<group>"; };
+		1464032F26F924480033CCAE /* BookingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTableViewCell.swift; sourceTree = "<group>"; };
+		1464033426F924900033CCAE /* BookingTurfCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTurfCollectionViewCell.swift; sourceTree = "<group>"; };
 		1472452B26F9C0D10092C5C4 /* AcadamyDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcadamyDetailViewModel.swift; sourceTree = "<group>"; };
 		1472452D26F9C0D10092C5C4 /* AcadamySportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcadamySportsModel.swift; sourceTree = "<group>"; };
 		1472452F26F9C0D10092C5C4 /* AcadamyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcadamyDetailsViewController.swift; sourceTree = "<group>"; };
@@ -97,11 +109,17 @@
 		14A13E3326E26158001AF805 /* TTBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTBaseViewController.swift; sourceTree = "<group>"; };
 		14A13E3826E263FA001AF805 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		14A13E3D26E26435001AF805 /* BookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
+		14A23F3826FA01D90092CB0E /* SportsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		14A23F3D26FA64350092CB0E /* TimeSlotCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSlotCollectionViewCell.swift; sourceTree = "<group>"; };
+		14AD339226F74C8200F53DE0 /* BookingScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingScreenVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		14AD339F26F74CB200F53DE0 /* BookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
+		14AD33AE26F74CED00F53DE0 /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		14AD33B426F74D1D00F53DE0 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		4F11EF24652C3BC7C7F1FF85 /* Pods_TopTekkarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopTekkarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopTekkar_TopTekkarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E44C9FAC6644EA0DF9193DF /* Pods-TopTekkar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.debug.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.debug.xcconfig"; sourceTree = "<group>"; };
 		971BA313C40982A7A9AE688E /* Pods-TopTekkar-TopTekkarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar-TopTekkarUITests/Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A384077F26F61EEF00ACDA2C /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		A384077F26F61EEF00ACDA2C /* Academy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Academy.storyboard; sourceTree = "<group>"; };
 		A384078926F6650800ACDA2C /* AcadamyListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcadamyListViewModel.swift; sourceTree = "<group>"; };
 		ACAEA3B6F6DE9E5C70C00CF5 /* Pods-TopTekkar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.release.xcconfig"; sourceTree = "<group>"; };
 		B54E15C2E1E79366CD93039E /* Pods-TopTekkarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkarTests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkarTests/Pods-TopTekkarTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,7 +317,7 @@
 		1478D3CE26ECF4CE00EA66D1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A384077F26F61EEF00ACDA2C /* main.storyboard */,
+				A384077F26F61EEF00ACDA2C /* Academy.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 			children = (
 				1472452926F9C0D10092C5C4 /* AcadamyDetails */,
 				A385D39B26F7B41D00166427 /* AcadamyList */,
+				14AD339E26F74C9600F53DE0 /* BookingScreen */,
 				14A13DE826E25B8D001AF805 /* AppDelegate.swift */,
 				14A13DEA26E25B8D001AF805 /* SceneDelegate.swift */,
 				1478D3AD26EC9CB700EA66D1 /* AppConstants.swift */,
@@ -371,6 +390,54 @@
 				14A13E0C26E25B8E001AF805 /* Info.plist */,
 			);
 			path = TopTekkarUITests;
+			sourceTree = "<group>";
+		};
+		14AD339A26F74C8D00F53DE0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14AD339226F74C8200F53DE0 /* BookingScreenVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		14AD339E26F74C9600F53DE0 /* BookingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				14AD339A26F74C8D00F53DE0 /* Controller */,
+				14AD33A726F74CBA00F53DE0 /* Model */,
+				14AD33B326F74CF400F53DE0 /* View */,
+				14AD33BC26F74D2000F53DE0 /* ViewModel */,
+			);
+			path = BookingScreen;
+			sourceTree = "<group>";
+		};
+		14AD33A726F74CBA00F53DE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14AD339F26F74CB200F53DE0 /* BookingModel.swift */,
+				1462213726FE4C3100FF2A50 /* TimeSlotModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14AD33B326F74CF400F53DE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14AD33AE26F74CED00F53DE0 /* Booking.storyboard */,
+				1464032F26F924480033CCAE /* BookingTableViewCell.swift */,
+				1464033426F924900033CCAE /* BookingTurfCollectionViewCell.swift */,
+				14A23F3826FA01D90092CB0E /* SportsListCollectionViewCell.swift */,
+				14A23F3D26FA64350092CB0E /* TimeSlotCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14AD33BC26F74D2000F53DE0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14AD33B426F74D1D00F53DE0 /* BookingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A384078126F628A300ACDA2C /* Controllers */ = {
@@ -533,7 +600,8 @@
 			files = (
 				147653B226E5412F0090395B /* SearchCategory.storyboard in Resources */,
 				1476539126E510EE0090395B /* HomeCollectionViewCell.xib in Resources */,
-				A384078026F61EEF00ACDA2C /* main.storyboard in Resources */,
+				14AD33AF26F74CED00F53DE0 /* Booking.storyboard in Resources */,
+				A384078026F61EEF00ACDA2C /* Academy.storyboard in Resources */,
 				14A13DF526E25B8E001AF805 /* LaunchScreen.storyboard in Resources */,
 				14633C0026E401EA008B514F /* HomeTableviewCell.xib in Resources */,
 				14A13DF226E25B8E001AF805 /* Assets.xcassets in Resources */,
@@ -665,10 +733,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1462213826FE4C3100FF2A50 /* TimeSlotModel.swift in Sources */,
 				14A13E3E26E26435001AF805 /* BookingVC.swift in Sources */,
+				14AD33A026F74CB200F53DE0 /* BookingModel.swift in Sources */,
 				147653A026E53F910090395B /* SearchCategoriesVC.swift in Sources */,
+				14A23F3E26FA64350092CB0E /* TimeSlotCollectionViewCell.swift in Sources */,
+				14AD339326F74C8200F53DE0 /* BookingScreenVC.swift in Sources */,
 				14A13DED26E25B8D001AF805 /* NotificationVC.swift in Sources */,
 				14633BD526E3F643008B514F /* HomeViewModel.swift in Sources */,
+				14AD33B526F74D1D00F53DE0 /* BookingViewModel.swift in Sources */,
+				14A23F3926FA01D90092CB0E /* SportsListCollectionViewCell.swift in Sources */,
 				14A13E3926E263FA001AF805 /* HomeVC.swift in Sources */,
 				1478D3C326ECF46200EA66D1 /* AcademyListViewController.swift in Sources */,
 				1472453226F9C0D10092C5C4 /* AcadamyDetailsViewController.swift in Sources */,
@@ -680,8 +754,10 @@
 				1476539026E510EE0090395B /* HomeCollectionViewCell.swift in Sources */,
 				14A13DE926E25B8D001AF805 /* AppDelegate.swift in Sources */,
 				14A13DEB26E25B8D001AF805 /* SceneDelegate.swift in Sources */,
+				1464033026F924480033CCAE /* BookingTableViewCell.swift in Sources */,
 				1478D3AE26EC9CB700EA66D1 /* AppConstants.swift in Sources */,
 				14633BFF26E401EA008B514F /* HomeTableviewCell.swift in Sources */,
+				1464033526F924900033CCAE /* BookingTurfCollectionViewCell.swift in Sources */,
 				14A13E3426E26158001AF805 /* TTBaseViewController.swift in Sources */,
 				1430666826E800D200020CB9 /* SearchCategoryCollectionViewCell.swift in Sources */,
 				A384078A26F6650800ACDA2C /* AcadamyListViewModel.swift in Sources */,

@@ -1,16 +1,20 @@
 PODS:
+  - ADDatePicker (1.0.0)
   - Alamofire (5.4.3)
 
 DEPENDENCIES:
+  - ADDatePicker
   - Alamofire
 
 SPEC REPOS:
   trunk:
+    - ADDatePicker
     - Alamofire
 
 SPEC CHECKSUMS:
+  ADDatePicker: 62cd9bb25b71b261bbd008020ea9347b84979873
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
 
-PODFILE CHECKSUM: 84db8ee2271ed25d7c05e10248813024a0c4d4cc
+PODFILE CHECKSUM: 9b2eb6fbbdd6ffa65c58d4936470f7d339566e80
 
 COCOAPODS: 1.11.0

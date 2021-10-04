@@ -8,15 +8,28 @@
 import Foundation
 
 struct AcadamySportsModel: Codable {
-    let responce: Bool
-    let data: [sportsDetails]
+    let response: Bool
+    let data: [SportsDetails]
+    
+    enum CodingKeys: String, CodingKey {
+        case response = "responce"
+        case data = "data"
+    }
+    
 }
 
 // MARK: - Datum
-struct sportsDetails: Codable {
-    let id, busID, categoryID, title: String
-    let slug, parent, leval, datumDescription: String
-    let image, status: String
+struct SportsDetails: Codable {
+    let id:String
+    let busID:String
+    let categoryID:String
+    let title: String
+    let slug: String
+    let parent: String
+    let leval: String
+    let datumDescription: String
+    let image :String
+    let status: String
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -26,4 +39,8 @@ struct sportsDetails: Codable {
         case datumDescription = "description"
         case image, status
     }
+}
+
+struct SportDetailsRequest {
+    let busId :String
 }

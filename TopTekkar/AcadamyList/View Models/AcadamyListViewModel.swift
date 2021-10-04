@@ -18,7 +18,7 @@ import Alamofire
     var bindingData : (() -> ()) = {}
     
     func callVenueDataService(reqParam:Dictionary<String, String>) {
-        APIHandler.shared.sendRequest(url: "https://www.toptekker.com/turfdemo/index.php/api/get_business", parameters: reqParam, decoder: AcadamyListModel.self) { (response, error) in
+        APIHandler.shared.sendRequest(url: "https://www.toptekker.com/turfdemo/index.php/api/get_business", parameters: reqParam, encoding: URLEncoding.httpBody, decoder: AcadamyListModel.self) { (response, error) in
             if let response = response as? AcadamyListModel{
                 print(response)
                 self.AcadamyData = response.data

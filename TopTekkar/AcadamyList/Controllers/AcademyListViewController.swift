@@ -11,20 +11,26 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
     var acadamyListModel: AcadamyListModel!
     var acadamyListViewModel = AcadamyListViewModel()
     var acadamyListData:[AcadamyDetails]?
+    var selectedCategory:SearchCategoriesDataModel?
     @IBOutlet weak var venueTableView: UITableView!
     
     @IBOutlet weak var venueSearchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.acadamyListViewModel =  AcadamyListViewModel()
-        let populatedDictionary = ["category": "10", "type": "venue"]
-        self.acadamyListViewModel.callVenueDataService(reqParam: populatedDictionary)
-        self.acadamyListViewModel.bindingData = {
-            if self.acadamyListViewModel.AcadamyData != nil{
-                self.acadamyListData = self.acadamyListViewModel.AcadamyData
-                self.venueTableView.reloadData()
+        if let categoryId = self.selectedCategory?.id{
+            let populatedDictionary = ["category": categoryId, "type": "venue"]
+            self.acadamyListViewModel.callVenueDataService(reqParam: populatedDictionary)
+            self.acadamyListViewModel.bindingData = {
+                if self.acadamyListViewModel.AcadamyData != nil{
+                    self.acadamyListData = self.acadamyListViewModel.AcadamyData
+                    DispatchQueue.main.async {
+                        self.venueTableView.reloadData()
+                    }
+                }
             }
         }
+    
     }
 
     
@@ -44,7 +50,9 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
         
         if let imageName = self.acadamyListData?[indexPath.row].busLogo {
            // let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+imageName
-            let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
+//            let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
+            let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+imageName
+
             self.acadamyListViewModel.downloadImage(url: url) { (response) in
                 if let data = response as? Data{
                     bus_logo.image = UIImage(data: data)
@@ -66,6 +74,8 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
         if segue.identifier == "AcadamyDetails"  {
           let  vc = segue.destination as! AcadamyDetailsViewController
             vc.acadamyDetails  = sender as? AcadamyDetails
+            vc.selectedCategory = self.selectedCategory
+            
        }
     }
 

@@ -19,7 +19,7 @@ class SearchCategoriesViewModel {
     var bindingData : (() -> ()) = {}
     
     func fetchData() {
-        APIHandler.shared.sendRequest(url: "https://www.toptekker.com/turfdemo/index.php/api/get_categories", parameters: nil, decoder: SearchCategoriesModel.self) { (response, error) in
+        APIHandler.shared.sendRequest(url: "https://www.toptekker.com/turfdemo/index.php/api/get_categories", parameters: nil, encoding: URLEncoding.default, decoder: SearchCategoriesModel.self) { (response, error) in
             if let response = response as? SearchCategoriesModel{
                 print(response)
                 self.categoryData = response.data

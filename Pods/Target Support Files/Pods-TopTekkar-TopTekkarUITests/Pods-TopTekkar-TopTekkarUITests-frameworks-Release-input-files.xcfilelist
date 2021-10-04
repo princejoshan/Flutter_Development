@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TopTekkar-TopTekkarUITests/Pods-TopTekkar-TopTekkarUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ADDatePicker/ADDatePicker.framework
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework

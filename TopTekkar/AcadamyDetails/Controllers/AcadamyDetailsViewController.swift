@@ -20,9 +20,10 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var facilityStackView: UIStackView!
     var acadamyDetails:AcadamyDetails?
-    var acadamySportsDetails : [sportsDetails]?
+    var selectedCategory:SearchCategoriesDataModel?
+    var acadamySportsDetails : [SportsDetails]?
     var acadamyDetailViewModel = AcadamyDetailViewModel()
-
+    var isPushed:Bool!
     @IBOutlet weak var locationMap: MKMapView!
     @IBOutlet weak var sportsCollctionView: UICollectionView!
     @IBOutlet weak var topImageView: UIView!
@@ -32,6 +33,7 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
         self.setUpUi()
         self.updateUI()
         self.getSportsDetails()
+        isPushed = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,15 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "BookingScreenVC" && !isPushed {
+                isPushed = true
+               let vc = segue.destination as! BookingScreenVC
+               vc.acadamySportsDetails = self.acadamySportsDetails
+                vc.selectedCategory = self.selectedCategory
+           }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -106,10 +117,19 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
         self.acadamyDetailViewModel.bindingData = {
             if self.acadamyDetailViewModel.AcadamySportsDetails != nil{
                 self.acadamySportsDetails = self.acadamyDetailViewModel.AcadamySportsDetails
+                DispatchQueue.main.async {
                 self.sportsCollctionView.reloadData()
+                }
             }
         }
 
+    }
+
+    @IBAction func viewMemberShipBtnAction(_ sender: Any) {
+        if !isPushed {
+            isPushed = true
+            performSegue(withIdentifier: "BookingScreenVC", sender:self)
+        }
     }
 
     

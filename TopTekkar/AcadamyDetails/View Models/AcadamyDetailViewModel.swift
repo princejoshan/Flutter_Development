@@ -6,10 +6,10 @@
 //
 
 import Foundation
-
+import Alamofire
 
 class AcadamyDetailViewModel {
-   private(set) var AcadamySportsDetails : [sportsDetails]! {
+   private(set) var AcadamySportsDetails : [SportsDetails]! {
        didSet {
            self.bindingData()
        }
@@ -18,7 +18,8 @@ class AcadamyDetailViewModel {
    var bindingData : (() -> ()) = {}
    
    func callSportsDataService(reqParam:Dictionary<String, String>) {
-       APIHandler.shared.sendRequest(url: "http://www.toptekker.com/turfdemo/api/get_sports", parameters: reqParam, decoder: AcadamySportsModel.self) { (response, error) in
+    let param :[String:String] = ["bus_id":"10"]
+    APIHandler.shared.sendRequestAlomofire(url: "https://www.toptekker.com/turfdemo/index.php/api/get_sports", parameters: param, encoding: URLEncoding.httpBody, decoder: AcadamySportsModel.self) { (response, error) in
            if let response = response as? AcadamySportsModel{
                print(response)
             self.AcadamySportsDetails = response.data
@@ -37,5 +38,11 @@ class AcadamyDetailViewModel {
            completion(response)
        }
    }
+    
+//    func cancelAllRequest(){
+//        AF.session.getAllTasks { (sessionTask) in
+//            sessionTask.forEach{($0.cancel())}
+//        }
+//    }
 
 }

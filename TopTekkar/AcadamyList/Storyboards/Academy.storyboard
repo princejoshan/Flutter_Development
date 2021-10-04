@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -28,14 +28,14 @@
                                 <rect key="frame" x="0.0" y="94" width="414" height="642"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="109" id="TU1-pn-Kcp">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="109"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TU1-pn-Kcp" id="k96-Ln-cC7">
-                                            <rect key="frame" x="0.0" y="0.0" width="384.33333333333331" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382.66666666666669" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aira sports Academy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWb-TN-dVd">
-                                                    <rect key="frame" x="102" y="15" width="274.33333333333331" height="21"/>
+                                                    <rect key="frame" x="102" y="15" width="272.66666666666669" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Y8R-LW-UAT"/>
                                                     </constraints>
@@ -44,7 +44,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kovilpatti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf7-u1-O65">
-                                                    <rect key="frame" x="102" y="39" width="274.33333333333331" height="12"/>
+                                                    <rect key="frame" x="102" y="39" width="272.66666666666669" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="akv-WR-Qg7"/>
                                                     </constraints>
@@ -53,7 +53,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----------------------------------------------------------------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcb-pT-A5y">
-                                                    <rect key="frame" x="102" y="59.666666666666657" width="274.33333333333331" height="11"/>
+                                                    <rect key="frame" x="102" y="59.666666666666657" width="272.66666666666669" height="11"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="11" id="9xi-h3-xqH"/>
                                                     </constraints>
@@ -62,7 +62,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-n9-de2">
-                                                    <rect key="frame" x="102" y="72.666666666666671" width="274.33333333333331" height="21"/>
+                                                    <rect key="frame" x="102" y="72.666666666666671" width="272.66666666666669" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="rmx-hi-o1I"/>
                                                     </constraints>
@@ -199,6 +199,10 @@
                                                 <state key="normal" title="View Membership plan">
                                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="viewMemberShipBtnAction:" destination="vXj-Me-Mml" eventType="touchUpInside" id="VPE-cf-G4S"/>
+                                                    <segue destination="I9b-EI-C7f" kind="show" identifier="BookingScreenVC" id="GKD-Ej-7hS"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74x-8u-2EG">
                                                 <rect key="frame" x="0.0" y="264" width="414" height="64"/>
@@ -522,6 +526,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piO-cR-OXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2237.68115942029" y="4.8913043478260869"/>
+        </scene>
+        <!--BookingScreenVC-->
+        <scene sceneID="Wia-m7-VIc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Booking" referencedIdentifier="BookingScreenVC" id="I9b-EI-C7f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XFP-VA-S7A"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EnY-Ws-lSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="-137"/>
         </scene>
     </scenes>
     <resources>

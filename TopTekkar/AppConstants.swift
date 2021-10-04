@@ -12,7 +12,7 @@ struct TTAppConstant {
     struct UrlConstant {
         static let baseUrl = "http://www.toptekker.com/turfdemo"
         static let categoryAPI = "/uploads/admin/category/"
-        static let Academy_photos_path = "/uploads/business/businessphoto/"
+        static let Academy_photos_path = "/uploads/business/"
 
     }
 
