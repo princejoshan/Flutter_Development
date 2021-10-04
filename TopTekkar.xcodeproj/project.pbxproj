@@ -45,9 +45,14 @@
 		14AD33A026F74CB200F53DE0 /* BookingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD339F26F74CB200F53DE0 /* BookingModel.swift */; };
 		14AD33AF26F74CED00F53DE0 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AD33AE26F74CED00F53DE0 /* Booking.storyboard */; };
 		14AD33B526F74D1D00F53DE0 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AD33B426F74D1D00F53DE0 /* BookingViewModel.swift */; };
+		14D4AD5B270AF345002D6C0C /* Academy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D4AD5A270AF345002D6C0C /* Academy.storyboard */; };
 		4878D2570933A03DEF33F0BE /* Pods_TopTekkar_TopTekkarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */; };
 		934DED48D38067844D3B282E /* Pods_TopTekkarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F11EF24652C3BC7C7F1FF85 /* Pods_TopTekkarTests.framework */; };
-		A384078026F61EEF00ACDA2C /* Academy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A384077F26F61EEF00ACDA2C /* Academy.storyboard */; };
+		A3114B512705A7DB005658BE /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3114B502705A7DB005658BE /* PaymentDetailsViewController.swift */; };
+		A36EA08D26FA3692002FAE92 /* TTCommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EA08C26FA3692002FAE92 /* TTCommonFunctions.swift */; };
+		A36EA08F26FA4105002FAE92 /* AcadamyPhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EA08E26FA4105002FAE92 /* AcadamyPhotosModel.swift */; };
+		A36EA09126FA4BD1002FAE92 /* AcadamyBookingPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EA09026FA4BD1002FAE92 /* AcadamyBookingPlanViewController.swift */; };
+		A36EA09326FA5699002FAE92 /* AcadamyBookingPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36EA09226FA5699002FAE92 /* AcadamyBookingPlanModel.swift */; };
 		A384078A26F6650800ACDA2C /* AcadamyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A384078926F6650800ACDA2C /* AcadamyListViewModel.swift */; };
 		C652CAFBE57C18D83A973323 /* Pods_TopTekkar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE43B6AEDE1CC0126D119C48 /* Pods_TopTekkar.framework */; };
 /* End PBXBuildFile section */
@@ -115,11 +120,16 @@
 		14AD339F26F74CB200F53DE0 /* BookingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingModel.swift; sourceTree = "<group>"; };
 		14AD33AE26F74CED00F53DE0 /* Booking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
 		14AD33B426F74D1D00F53DE0 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
+		14D4AD5A270AF345002D6C0C /* Academy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Academy.storyboard; sourceTree = "<group>"; };
 		4F11EF24652C3BC7C7F1FF85 /* Pods_TopTekkarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopTekkarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716CEDFED41AB967B252E66D /* Pods_TopTekkar_TopTekkarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopTekkar_TopTekkarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E44C9FAC6644EA0DF9193DF /* Pods-TopTekkar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.debug.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.debug.xcconfig"; sourceTree = "<group>"; };
 		971BA313C40982A7A9AE688E /* Pods-TopTekkar-TopTekkarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar-TopTekkarUITests/Pods-TopTekkar-TopTekkarUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A384077F26F61EEF00ACDA2C /* Academy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Academy.storyboard; sourceTree = "<group>"; };
+		A3114B502705A7DB005658BE /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
+		A36EA08C26FA3692002FAE92 /* TTCommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCommonFunctions.swift; sourceTree = "<group>"; };
+		A36EA08E26FA4105002FAE92 /* AcadamyPhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcadamyPhotosModel.swift; sourceTree = "<group>"; };
+		A36EA09026FA4BD1002FAE92 /* AcadamyBookingPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcadamyBookingPlanViewController.swift; sourceTree = "<group>"; };
+		A36EA09226FA5699002FAE92 /* AcadamyBookingPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcadamyBookingPlanModel.swift; sourceTree = "<group>"; };
 		A384078926F6650800ACDA2C /* AcadamyListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcadamyListViewModel.swift; sourceTree = "<group>"; };
 		ACAEA3B6F6DE9E5C70C00CF5 /* Pods-TopTekkar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkar.release.xcconfig"; path = "Target Support Files/Pods-TopTekkar/Pods-TopTekkar.release.xcconfig"; sourceTree = "<group>"; };
 		B54E15C2E1E79366CD93039E /* Pods-TopTekkarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopTekkarTests.release.xcconfig"; path = "Target Support Files/Pods-TopTekkarTests/Pods-TopTekkarTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				1472452D26F9C0D10092C5C4 /* AcadamySportsModel.swift */,
+				A36EA08E26FA4105002FAE92 /* AcadamyPhotosModel.swift */,
+				A36EA09226FA5699002FAE92 /* AcadamyBookingPlanModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				1472452F26F9C0D10092C5C4 /* AcadamyDetailsViewController.swift */,
+				A36EA09026FA4BD1002FAE92 /* AcadamyBookingPlanViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,7 +330,7 @@
 		1478D3CE26ECF4CE00EA66D1 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A384077F26F61EEF00ACDA2C /* Academy.storyboard */,
+				14D4AD5A270AF345002D6C0C /* Academy.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -355,6 +368,7 @@
 		14A13DE726E25B8D001AF805 /* TopTekkar */ = {
 			isa = PBXGroup;
 			children = (
+				A39033D826FCEB42000D83CC /* PaymentDetails */,
 				1472452926F9C0D10092C5C4 /* AcadamyDetails */,
 				A385D39B26F7B41D00166427 /* AcadamyList */,
 				14AD339E26F74C9600F53DE0 /* BookingScreen */,
@@ -366,6 +380,7 @@
 				1476539E26E53F910090395B /* SearchCategories */,
 				14633BC926E3F618008B514F /* HomeScreen */,
 				14A13E3D26E26435001AF805 /* BookingVC.swift */,
+				A36EA08C26FA3692002FAE92 /* TTCommonFunctions.swift */,
 				14A13DF126E25B8E001AF805 /* Assets.xcassets */,
 				14A13DF326E25B8E001AF805 /* LaunchScreen.storyboard */,
 				14A13DF626E25B8E001AF805 /* Info.plist */,
@@ -465,6 +480,14 @@
 				A384078226F6295D00ACDA2C /* View Models */,
 			);
 			path = AcadamyList;
+			sourceTree = "<group>";
+		};
+		A39033D826FCEB42000D83CC /* PaymentDetails */ = {
+			isa = PBXGroup;
+			children = (
+				A3114B502705A7DB005658BE /* PaymentDetailsViewController.swift */,
+			);
+			path = PaymentDetails;
 			sourceTree = "<group>";
 		};
 		A8501392FC3C257AF7D0AA34 /* Pods */ = {
@@ -599,9 +622,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				147653B226E5412F0090395B /* SearchCategory.storyboard in Resources */,
+				14D4AD5B270AF345002D6C0C /* Academy.storyboard in Resources */,
 				1476539126E510EE0090395B /* HomeCollectionViewCell.xib in Resources */,
 				14AD33AF26F74CED00F53DE0 /* Booking.storyboard in Resources */,
-				A384078026F61EEF00ACDA2C /* Academy.storyboard in Resources */,
 				14A13DF526E25B8E001AF805 /* LaunchScreen.storyboard in Resources */,
 				14633C0026E401EA008B514F /* HomeTableviewCell.xib in Resources */,
 				14A13DF226E25B8E001AF805 /* Assets.xcassets in Resources */,
@@ -739,6 +762,7 @@
 				147653A026E53F910090395B /* SearchCategoriesVC.swift in Sources */,
 				14A23F3E26FA64350092CB0E /* TimeSlotCollectionViewCell.swift in Sources */,
 				14AD339326F74C8200F53DE0 /* BookingScreenVC.swift in Sources */,
+				A36EA08D26FA3692002FAE92 /* TTCommonFunctions.swift in Sources */,
 				14A13DED26E25B8D001AF805 /* NotificationVC.swift in Sources */,
 				14633BD526E3F643008B514F /* HomeViewModel.swift in Sources */,
 				14AD33B526F74D1D00F53DE0 /* BookingViewModel.swift in Sources */,
@@ -756,12 +780,16 @@
 				14A13DEB26E25B8D001AF805 /* SceneDelegate.swift in Sources */,
 				1464033026F924480033CCAE /* BookingTableViewCell.swift in Sources */,
 				1478D3AE26EC9CB700EA66D1 /* AppConstants.swift in Sources */,
+				A36EA09126FA4BD1002FAE92 /* AcadamyBookingPlanViewController.swift in Sources */,
+				A36EA08F26FA4105002FAE92 /* AcadamyPhotosModel.swift in Sources */,
 				14633BFF26E401EA008B514F /* HomeTableviewCell.swift in Sources */,
 				1464033526F924900033CCAE /* BookingTurfCollectionViewCell.swift in Sources */,
 				14A13E3426E26158001AF805 /* TTBaseViewController.swift in Sources */,
+				A36EA09326FA5699002FAE92 /* AcadamyBookingPlanModel.swift in Sources */,
 				1430666826E800D200020CB9 /* SearchCategoryCollectionViewCell.swift in Sources */,
 				A384078A26F6650800ACDA2C /* AcadamyListViewModel.swift in Sources */,
 				1472453026F9C0D10092C5C4 /* AcadamyDetailViewModel.swift in Sources */,
+				A3114B512705A7DB005658BE /* PaymentDetailsViewController.swift in Sources */,
 				147653A526E540090090395B /* SearchCategoriesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

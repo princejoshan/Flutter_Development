@@ -118,10 +118,10 @@ class BookingScreenVC: UIViewController {
     }
     
     
-    func timeslotBtnAction(indexPath:IndexPath)  {
-        <#function body#>
-    }
-    
+//    func timeslotBtnAction(indexPath:IndexPath)  {
+//        <#function body#>
+//    }
+//    
     
     /*
     // MARK: - Navigation

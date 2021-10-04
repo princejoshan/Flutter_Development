@@ -28,6 +28,9 @@ class APIHandler {
         let utilityQueue = DispatchQueue.global(qos: .utility)
 
         AF.request(url,method: .post,parameters: parameters,encoding:encoding).responseDecodable(of: decoder,queue: utilityQueue, decoder: JSONDecoder()) { response in
+//=======
+//        AF.request(url,method: .post, parameters: parameters).responseDecodable(of: decoder,queue: .main, decoder: JSONDecoder()) { response in
+//>>>>>>> 3f620a1aed722d3d9df2a050f28c1c601c094575
             switch response.result {
             case let .success(data):
                 // success

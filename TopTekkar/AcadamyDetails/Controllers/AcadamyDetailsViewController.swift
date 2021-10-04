@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 
+
 class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var membershipPlanBtn: UIButton!
@@ -20,16 +21,21 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var facilityStackView: UIStackView!
     var acadamyDetails:AcadamyDetails?
-    var selectedCategory:SearchCategoriesDataModel?
+ var selectedCategory:SearchCategoriesDataModel?
     var acadamySportsDetails : [SportsDetails]?
     var acadamyDetailViewModel = AcadamyDetailViewModel()
     var isPushed:Bool!
+    var acadamyPhotosDetails : [PhotoDetails]?
+    @IBOutlet weak var contentScrollView: UIScrollView!
+    private let btn = UIButton(type: UIButton.ButtonType.custom) as UIButton
+
     @IBOutlet weak var locationMap: MKMapView!
     @IBOutlet weak var sportsCollctionView: UICollectionView!
     @IBOutlet weak var topImageView: UIView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getAcadamyPhotosDetails()
         self.setUpUi()
         self.updateUI()
         self.getSportsDetails()
@@ -54,7 +60,10 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     }
     
     override var prefersStatusBarHidden: Bool {
-        return true
+        if self.navigationController?.navigationBar.isHidden == true {
+            return true
+        }
+        return false
     }
 
     func setUpUi() {
@@ -86,8 +95,31 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
         self.locationMap.centerToLocation(initialLocation)
         let artwork = Artwork(title: self.acadamyDetails?.busTitle, locationName: self.acadamyDetails?.busGoogleStreet, discipline: "", coordinate: CLLocationCoordinate2D(latitude: self.acadamyDetails?.busLatitude.toDouble() ?? 0.0, longitude: (self.acadamyDetails?.busLongitude.toDouble())!))
         self.locationMap.addAnnotation(artwork)
+        
+      //  let btn = UIButton(type: .custom)
+        btn.frame = CGRect(x: self.view.frame.width - 96, y: self.view.frame.height - 140, width: 80, height: 80)
+        btn.setTitle("BOOK", for: .normal)
+        btn.backgroundColor = UIColor.MyApp.floatingBtnColor
+        btn.clipsToBounds = true
+        btn.layer.cornerRadius = 40
+        
+        btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        btn.layer.shadowOffset = CGSize(width: 0, height: 3)
+        btn.layer.shadowOpacity = 1.0
+        btn.layer.shadowRadius = 10.0
+        btn.layer.masksToBounds = false
+
+        btn.addTarget(self, action: #selector(tapBooking), for: .touchUpInside)
+        btn.frame = CGRect(x: self.view.frame.width - 96, y:self.view.frame.size.height - 170,  width: 80, height: 80)
+        self.view.addSubview(btn)
+
+    }
+    
+    @objc func tapBooking() {
+        self.bookAction()
     }
 
+    
     @objc func buttonAction(sender: UIButton!) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -108,6 +140,9 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
         else {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
         }
+//        let off = self.contentScrollView.contentOffset.y
+//        let yPst = self.view.frame.size.height - 120
+//        btn.frame = CGRect(x: self.view.frame.width - 96, y:yPst - off,  width: 80, height: 80)
     }
     
     func getSportsDetails() {
@@ -122,31 +157,50 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
                 }
             }
         }
+    }
+    
+    func getAcadamyPhotosDetails() {
+        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
+        let populatedDictionary = ["bus_id": "10"]
+        self.acadamyDetailViewModel.callAcadamyPhotoDataService(reqParam: populatedDictionary)
+        self.acadamyDetailViewModel.bindingAcadamyPhotoDetails = {
+            if self.acadamyDetailViewModel.AcadamyPhotosDetails != nil{
+                self.acadamyPhotosDetails = self.acadamyDetailViewModel.AcadamyPhotosDetails
+            }
+        }
+    }
 
+    func bookAction()  {
+        let blurBackgroundView = UIView()
+        blurBackgroundView.tag = 2
+        blurBackgroundView.frame = self.view.frame
+        blurBackgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        self.view.addSubview(blurBackgroundView)
+//        let bookingPlanVC = AcadamyBookingPlanViewController()
+        let bookingPlanVC : AcadamyBookingPlanViewController = UIStoryboard(name: "Academy", bundle: nil).instantiateViewController(withIdentifier: "AcadamyBookingPlanViewController") as! AcadamyBookingPlanViewController
+        self.addChild(bookingPlanVC)
+        bookingPlanVC.view.frame = CGRect(x: 8, y: 40, width: self.view.frame.size.width - 16, height: 490)
+        bookingPlanVC.view.center = self.view.center
+        blurBackgroundView.addSubview(bookingPlanVC.view)
+        bookingPlanVC.didMove(toParent: self)
+        bookingPlanVC.view.cornerRadius()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        blurBackgroundView.addGestureRecognizer(tap)
+
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        self.view .viewWithTag(2)?.removeFromSuperview()
     }
 
     @IBAction func viewMemberShipBtnAction(_ sender: Any) {
-        if !isPushed {
-            isPushed = true
-            performSegue(withIdentifier: "BookingScreenVC", sender:self)
-        }
+   
     }
 
     
     @IBAction func backAction(_ sender: UIButton) {
     
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension AcadamyDetailsViewController: UICollectionViewDelegateFlowLayout {
@@ -170,6 +224,14 @@ extension AcadamyDetailsViewController :UICollectionViewDelegate,UICollectionVie
                 sportsLogo.image = UIImage(data: data)
             }
         }
+//        let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+(acadamySportsDetails?[indexPath.row].image)!
+//
+//        self.acadamyDetailViewModel.downloadImage(url: url) { (response) in
+//            if let data = response as? Data{
+//                sportsLogo.image = UIImage(data: data)
+//            }
+//        }
+
 //        cell?.layer.cornerRadius =  8
 //        cell?.clipsToBounds = true
         return cell
@@ -182,7 +244,7 @@ extension AcadamyDetailsViewController :UICollectionViewDelegate,UICollectionVie
 
 final class ParallaxHeaderView: UIView {
 
-    var acadamyListViewModel = AcadamyListViewModel()
+//    var acadamyDetailsViewModel = AcadamyDetailViewModel()
 
     fileprivate var heightLayoutConstraint = NSLayoutConstraint()
     fileprivate var bottomLayoutConstraint = NSLayoutConstraint()
@@ -225,6 +287,17 @@ final class ParallaxHeaderView: UIView {
         imageView.backgroundColor = .white
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
+        
+//        if let imageName = self.acadamyDetailsViewModel.AcadamyPhotosDetails[1].photoImage {
+//            let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+self.acadamyDetailsViewModel.AcadamyPhotosDetails[1].photoImage 
+////            let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
+//            self.acadamyDetailsViewModel.downloadImage(url: url) { (response) in
+//                if let data = response as? Data{
+//                    imageView.image = UIImage(data: data)
+//                }
+//            }
+//        }
+
 //        let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
 //        self.acadamyListViewModel.downloadImage(url: url) { (response) in
            // if let data = response as? Data{
@@ -272,46 +345,3 @@ final class ParallaxHeaderView: UIView {
     }
 }
 
-extension String {
-    func toDouble() -> Double? {
-        return NumberFormatter().number(from: self)?.doubleValue
-    }
-}
-
-private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 1000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
-}
-
-class Artwork: NSObject, MKAnnotation {
-  let title: String?
-  let locationName: String?
-  let discipline: String?
-  let coordinate: CLLocationCoordinate2D
-
-  init(
-    title: String?,
-    locationName: String?,
-    discipline: String?,
-    coordinate: CLLocationCoordinate2D
-  ) {
-    self.title = title
-    self.locationName = locationName
-    self.discipline = discipline
-    self.coordinate = coordinate
-
-    super.init()
-  }
-
-  var subtitle: String? {
-    return locationName
-  }
-}
