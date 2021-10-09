@@ -55,15 +55,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D2C4633B-3980-45D3-8C62-366B16B487A5"
+            uuid = "451B31DC-CB58-4146-BB2D-7B3D0A108DB9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TopTekkar/AcadamyDetails/Controllers/AcadamyDetailsViewController.swift"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -71,15 +71,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5AC53D2A-8F47-45C3-B23C-6D995229AF6C"
+            uuid = "4B3E3239-1DC9-4E5A-8397-1C2DD4C20709"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TopTekkar/AcadamyDetails/Controllers/AcadamyDetailsViewController.swift"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -87,15 +87,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F9CD80E8-A1D9-4828-89B5-47663FEC25EB"
-            shouldBeEnabled = "No"
+            uuid = "05E5191E-CC12-419A-B5D7-249BE4E2F990"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TopTekkar/AcadamyDetails/Controllers/AcadamyDetailsViewController.swift"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "unknown"
             landmarkType = "0">
          </BreakpointContent>
@@ -103,33 +103,129 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "852105BD-FD67-48A3-A01D-BC4D642F9B23"
+            uuid = "7CFB6443-4A29-4FCA-A224-C75F5A9C1649"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TopTekkar/AcadamyDetails/View Models/AcadamyDetailViewModel.swift"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
             endingLineNumber = "62"
-            landmarkName = "callSpecialTimingService(reqParam:)"
-            landmarkType = "7">
+            landmarkName = "SpecialTiming"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "7CFB6443-4A29-4FCA-A224-C75F5A9C1649 - 3644d30e6bdc8f03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopTekkar.SpecialTiming.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;TopTekkar.SpecialTiming.CodingKeys&gt;"
+                  moduleName = "TopTekkar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prince/Downloads/TopTekkar/TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "7CFB6443-4A29-4FCA-A224-C75F5A9C1649 - 2a5ce8f4fa8e5d6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopTekkar.SpecialTiming.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "TopTekkar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prince/Downloads/TopTekkar/TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "83">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C6C9A978-71D0-4ADF-BD28-7C21FCE1C15B"
+            uuid = "8EC2B012-8489-41DB-83DA-230A6E261DE7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "8EC2B012-8489-41DB-83DA-230A6E261DE7 - 3644d30e6bdc8f45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopTekkar.SpecialTiming.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;TopTekkar.SpecialTiming.CodingKeys&gt;"
+                  moduleName = "TopTekkar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prince/Downloads/TopTekkar/TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "254">
+               </Location>
+               <Location
+                  uuid = "8EC2B012-8489-41DB-83DA-230A6E261DE7 - 2a5ce8f4fa8e5d2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TopTekkar.SpecialTiming.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "TopTekkar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prince/Downloads/TopTekkar/TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D213EC1-581B-4BC9-8F77-5C742BC4E7EE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TopTekkar/AcadamyDetails/Model/AcadamyBookingPlanModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAB093E1-9837-4E72-9845-56377DBACAAC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TopTekkar/AcadamyDetails/Controllers/AcadamyDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "316"
+            endingLineNumber = "316"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

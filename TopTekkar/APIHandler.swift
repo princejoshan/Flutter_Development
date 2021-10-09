@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-class APIHandler {
+class APIHandler: NSObject, URLSessionDelegate {
     static let shared = APIHandler()
     
     private lazy var queue: DispatchQueue = {
@@ -50,11 +50,26 @@ class APIHandler {
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
+        
         // Set HTTP Request Header
+        if let parameters = parameters {
+            do {
 
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
-//        request.setValue("text/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+                request.httpBody = try JSONSerialization.data(withJSONObject: parameters as Any, options: .prettyPrinted) // pass dictionary to data object and set it as request body
+            } catch let error {
+                print(error.localizedDescription)
+                completion(AnyObject.self, error)
+            }
+
+        }
+
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+
+//        request.setValue("application/json", forHTTPHeaderField: "Accept")
+////        request.setValue("text/json", forHTTPHeaderField: "Content-Type")
+//        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
 
         var encodeJSONData: Data?
 //        request.httpBody = encodeJSONData
@@ -67,15 +82,55 @@ class APIHandler {
 //        } catch let error {
 //            print(error.localizedDescription)
 //        }
+        
+//        let configuration =
+//            URLSessionConfiguration.default
+//
+//        let session = URLSession(configuration: configuration,
+//            delegate: self,
+//            delegateQueue:OperationQueue.main)
+//
+//
+//        let task = session.dataTaskWithRequest(request){
+//            (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+//
+//            if let httpResponse = response as? NSHTTPURLResponse {
+//                if httpResponse.statusCode != 200 {
+//                    print("response was not 200: \(response)")
+//                    return
+//                }
+//                else
+//                {
+//                    print("response was 200: \(response)")
+//
+//                    print("Data for 200: \(data)")
+//
+//                    // In the callback you can return the data/response
+//                    callback(data, nil)
+//                    return
+//                }
+//            }
+//            if (error != nil) {
+//                print("error request:\n \(error)")
+//                //Here you can return the error and handle it accordingly
+//                return
+//            }
+//        }
+//        task.resume()
+
+        
+        
         let jsonData = try? JSONSerialization.data(withJSONObject: parameters ?? [])
         request.httpBody = jsonData
 
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = 30.0
         sessionConfig.timeoutIntervalForResource = 60.0
-        let session = URLSession(configuration: sessionConfig)
+        let session = URLSession(configuration: sessionConfig,
+            delegate: self,
+            delegateQueue:OperationQueue.main)
         let task = session.dataTask(with: request) { (data, response, error) in
-               
+
 
                     if let error = error {
                         print("Error took place \(error)")
@@ -83,15 +138,15 @@ class APIHandler {
                     }
                     guard let data = data else {return}
                     do{
-                        
+
                         let data = try JSONDecoder().decode(decoder.self, from: data)
-                        
+
                         completion(data, nil)
                     }catch let jsonErr{
                         completion([], error)
                         print(jsonErr.localizedDescription)
                    }
-             
+
             }
             task.resume()
     }

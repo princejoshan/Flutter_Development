@@ -130,7 +130,7 @@
 		358F5250CC20909739D601E1AE42E445 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		39F57FA3B5AEDDE581BCEF7DA3B37413 /* Pods-TopTekkar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TopTekkar.modulemap"; sourceTree = "<group>"; };
 		3A9B8F3EF25EB2DDB003F898C3D687C3 /* Pods-TopTekkarTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TopTekkarTests-dummy.m"; sourceTree = "<group>"; };
-		3D81190B5BC102EECC44F61E9A494F44 /* InfiniteScrollingBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteScrollingBehaviour.swift; path = ADDatePicker/Source/Helpers/InfiniteScrollingBehaviour.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		3D81190B5BC102EECC44F61E9A494F44 /* InfiniteScrollingBehaviour.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteScrollingBehaviour.swift; path = ADDatePicker/Source/Helpers/InfiniteScrollingBehaviour.swift; sourceTree = "<group>"; };
 		462B40192A10B04C1B5029CC306A79A2 /* Pods-TopTekkar-TopTekkarUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TopTekkar-TopTekkarUITests-frameworks.sh"; sourceTree = "<group>"; };
 		47B3E5EE0DDA665ECBA2FE1B4AFAE356 /* Pods-TopTekkar-TopTekkarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TopTekkar-TopTekkarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4DF00D97B5A85F46DCC650865736EEA9 /* Pods-TopTekkarTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TopTekkarTests.modulemap"; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		9A6EAF921457AFC4839440B003A4A25A /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		9CB7EBC18C9F267595D7CD11693D76A9 /* Pods-TopTekkar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TopTekkar-dummy.m"; sourceTree = "<group>"; };
 		9D2DB7027DCC7290F83AE5400A6E8866 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4C91645905EC08AB61EB044425A0E4C /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		A68D91A420D2345FBECB6CE9FF902F7C /* ADDatePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ADDatePicker.swift; path = ADDatePicker/Source/View/ADDatePicker.swift; sourceTree = "<group>"; };
 		A741C42C7131ED5A9EBD042FC6EC9AE0 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
@@ -295,6 +295,7 @@
 				8DDC028AC9041FE1EA937A9FA70F0AE2 /* Validation.swift */,
 				F56E0136E28BD80C5B41D945055AF585 /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -359,6 +360,7 @@
 				04566EE63E1FE4D00A56F10F106652C5 /* ModelDate.swift */,
 				95A8C8D42BEE8B3B8D2914E8483BB62F /* Support Files */,
 			);
+			name = ADDatePicker;
 			path = ADDatePicker;
 			sourceTree = "<group>";
 		};

@@ -21,12 +21,14 @@ class AcademyListViewController: UIViewController,UITableViewDelegate,UITableVie
         if let categoryId = self.selectedCategory?.id{
             let populatedDictionary = ["category": categoryId, "type": "venue"]
             self.acadamyListViewModel.callVenueDataService(reqParam: populatedDictionary)
+            self.view.showLoader()
             self.acadamyListViewModel.bindingData = {
                 if self.acadamyListViewModel.AcadamyData != nil{
                     self.acadamyListData = self.acadamyListViewModel.AcadamyData
                     DispatchQueue.main.async {
                         self.venueTableView.reloadData()
                     }
+                    self.view.hideLoader()
                 }
             }
         }

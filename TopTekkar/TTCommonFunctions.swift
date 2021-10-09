@@ -36,6 +36,25 @@ extension UIView {
     func cornerRadius() {
         self.layer.cornerRadius = 4.0
     }
+    
+    func showLoader() {
+        let container: UIView = UIView()
+        container.tag = 1
+        container.frame = CGRect(x: 0, y: 0, width: 80, height: 80) // Set X and Y whatever you want
+        container.backgroundColor = .clear
+
+        let activityView = UIActivityIndicatorView(style: .large)
+        activityView.center = self.center
+
+        container.addSubview(activityView)
+        self.addSubview(container)
+        activityView.startAnimating()
+    }
+
+    func hideLoader()  {
+        self.viewWithTag(1)?.removeFromSuperview()
+    }
+    
 }
 
 extension MKMapView {
@@ -85,3 +104,4 @@ extension UIWindow {
         }
     }
 }
+

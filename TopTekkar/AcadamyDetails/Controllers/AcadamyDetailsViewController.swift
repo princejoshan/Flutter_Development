@@ -24,8 +24,11 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
  var selectedCategory:SearchCategoriesDataModel?
     var acadamySportsDetails : [SportsDetails]?
     var acadamyDetailViewModel = AcadamyDetailViewModel()
+    var acadamyGetSportsViewModel = AcadamyDetailViewModel()
+
     var isPushed:Bool!
     var acadamyPhotosDetails : [PhotoDetails]?
+    var parallaxViewFrame = ParallaxHeaderView()
     @IBOutlet weak var contentScrollView: UIScrollView!
     private let btn = UIButton(type: UIButton.ButtonType.custom) as UIButton
 
@@ -67,8 +70,8 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     }
 
     func setUpUi() {
-        let parallaxViewFrame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200)
-        self.topImageView.addSubview(ParallaxHeaderView(frame: parallaxViewFrame))
+        self.parallaxViewFrame.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 200)
+        self.topImageView.addSubview(ParallaxHeaderView(frame: self.parallaxViewFrame.frame))
 
         let backArrow = UIButton()
         backArrow.frame = CGRect(x: 8, y:0, width: 40, height: 40)
@@ -146,12 +149,12 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     }
     
     func getSportsDetails() {
-        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
-        let populatedDictionary = ["bus_id": "10"]
-        self.acadamyDetailViewModel.callSportsDataService(reqParam: populatedDictionary)
-        self.acadamyDetailViewModel.bindingData = {
-            if self.acadamyDetailViewModel.AcadamySportsDetails != nil{
-                self.acadamySportsDetails = self.acadamyDetailViewModel.AcadamySportsDetails
+//        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
+        let populatedDictionary = ["bus_id": (self.acadamyDetails?.busID)!]
+        self.acadamyGetSportsViewModel.callSportsDataService(reqParam: populatedDictionary)
+        self.acadamyGetSportsViewModel.bindingData = {
+            if self.acadamyGetSportsViewModel.AcadamySportsDetails != nil{
+                self.acadamySportsDetails = self.acadamyGetSportsViewModel.AcadamySportsDetails
                 DispatchQueue.main.async {
                 self.sportsCollctionView.reloadData()
                 }
@@ -160,12 +163,18 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     }
     
     func getAcadamyPhotosDetails() {
-        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
-        let populatedDictionary = ["bus_id": "10"]
+//        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
+        let populatedDictionary = ["bus_id": (self.acadamyDetails?.busID)!]
         self.acadamyDetailViewModel.callAcadamyPhotoDataService(reqParam: populatedDictionary)
         self.acadamyDetailViewModel.bindingAcadamyPhotoDetails = {
             if self.acadamyDetailViewModel.AcadamyPhotosDetails != nil{
                 self.acadamyPhotosDetails = self.acadamyDetailViewModel.AcadamyPhotosDetails
+                let arr = self.acadamyPhotosDetails?.filter {
+                    $0.busID == (self.acadamyDetails?.busID) && $0.id == self.selectedCategory?.id
+                }
+                if ((arr?.count ?? 0) != 0) {
+                    self.parallaxViewFrame.updateImage(pho: arr![0], par: self.parallaxViewFrame)
+                }
             }
         }
     }
@@ -211,19 +220,29 @@ extension AcadamyDetailsViewController: UICollectionViewDelegateFlowLayout {
 
 extension AcadamyDetailsViewController :UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return self.acadamySportsDetails?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
                                                       for: indexPath)
         let sportsLogo:UIImageView = cell.viewWithTag(1) as! UIImageView
-        let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
-        self.acadamyDetailViewModel.downloadImage(url: url) { (response) in
-            if let data = response as? Data{
-                sportsLogo.image = UIImage(data: data)
+        if let imageName = self.acadamySportsDetails?[indexPath.row].image {
+            let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.categoryAPI+imageName
+            self.acadamyDetailViewModel.downloadImage(url: url) { (response) in
+                if let data = response as? Data{
+                    sportsLogo.image =  UIImage.init(data: data)
+                }
             }
         }
+        
+        
+//        let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
+//        self.acadamyDetailViewModel.downloadImage(url: url) { (response) in
+//            if let data = response as? Data{
+//                sportsLogo.image = UIImage(data: data)
+//            }
+//        }
 //        let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+(acadamySportsDetails?[indexPath.row].image)!
 //
 //        self.acadamyDetailViewModel.downloadImage(url: url) { (response) in
@@ -244,12 +263,13 @@ extension AcadamyDetailsViewController :UICollectionViewDelegate,UICollectionVie
 
 final class ParallaxHeaderView: UIView {
 
-//    var acadamyDetailsViewModel = AcadamyDetailViewModel()
+    var acadamyDetailsViewModel = AcadamyDetailViewModel()
 
     fileprivate var heightLayoutConstraint = NSLayoutConstraint()
     fileprivate var bottomLayoutConstraint = NSLayoutConstraint()
     fileprivate var containerView = UIView()
     fileprivate var containerLayoutConstraint = NSLayoutConstraint()
+    let imageView: UIImageView = UIImageView()
     var offsetYy:Float = 0
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -282,57 +302,51 @@ final class ParallaxHeaderView: UIView {
                                                    constant: 0.0)
         self.addConstraint(containerLayoutConstraint)
 
-        let imageView: UIImageView = UIImageView()
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .white
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
         
-//        if let imageName = self.acadamyDetailsViewModel.AcadamyPhotosDetails[1].photoImage {
-//            let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.Academy_photos_path+self.acadamyDetailsViewModel.AcadamyPhotosDetails[1].photoImage 
-////            let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
-//            self.acadamyDetailsViewModel.downloadImage(url: url) { (response) in
-//                if let data = response as? Data{
-//                    imageView.image = UIImage(data: data)
-//                }
-//            }
-//        }
 
-//        let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/cricket_(1).png"
-//        self.acadamyListViewModel.downloadImage(url: url) { (response) in
-           // if let data = response as? Data{
-                imageView.image = UIImage(named: "banner1.png")
-           // }
-//        }
+        let url = "http://www.toptekker.com/turfdemo/uploads/admin/category/Indoor-Cricket.jpg"
+        self.acadamyDetailsViewModel.downloadImage(url: url) { (response) in
+            if let data = response as? Data{
+                DispatchQueue.main.async { [self] in
+                    imageView.image =   UIImage(named: "banner1.png")
+                    containerView.addSubview(imageView)
+                    containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[imageView]|",
+                                                                                options: NSLayoutConstraint.FormatOptions(rawValue: 0),
+                                                                            metrics: nil,
+                                                                            views: ["imageView" : imageView]))
+
+                    bottomLayoutConstraint = NSLayoutConstraint(item: imageView,
+                                                            attribute: .bottom,
+                                                            relatedBy: .equal,
+                                                            toItem: containerView,
+                                                            attribute: .bottom,
+                                                            multiplier: 1.0,
+                                                            constant: 0.0)
+
+                    containerView.addConstraint(bottomLayoutConstraint)
+
+                    heightLayoutConstraint = NSLayoutConstraint(item: imageView,
+                                                            attribute: .height,
+                                                            relatedBy: .equal,
+                                                            toItem: containerView,
+                                                            attribute: .height,
+                                                            multiplier: 1.0,
+                                                            constant: 0.0)
+
+                    containerView.addConstraint(heightLayoutConstraint)
+
+                }
+            }
+        }
 
         
 //        imageView.image = UIImage(named: "YourImage")
 
-        containerView.addSubview(imageView)
-        containerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[imageView]|",
-                                                                    options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                                                metrics: nil,
-                                                                views: ["imageView" : imageView]))
-
-        bottomLayoutConstraint = NSLayoutConstraint(item: imageView,
-                                                attribute: .bottom,
-                                                relatedBy: .equal,
-                                                toItem: containerView,
-                                                attribute: .bottom,
-                                                multiplier: 1.0,
-                                                constant: 0.0)
-
-        containerView.addConstraint(bottomLayoutConstraint)
-
-        heightLayoutConstraint = NSLayoutConstraint(item: imageView,
-                                                attribute: .height,
-                                                relatedBy: .equal,
-                                                toItem: containerView,
-                                                attribute: .height,
-                                                multiplier: 1.0,
-                                                constant: 0.0)
-
-        containerView.addConstraint(heightLayoutConstraint)
 }
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -342,6 +356,22 @@ final class ParallaxHeaderView: UIView {
         self.offsetYy = Float(offsetY)
         bottomLayoutConstraint.constant = offsetY >= 0 ? 0 : -offsetY / 2
         heightLayoutConstraint.constant = max(offsetY + scrollView.contentInset.top, scrollView.contentInset.top)
+      //  imageView.image = UIImage(named: "banner1.png")
+
+    }
+    
+    func updateImage(pho : PhotoDetails?,par : ParallaxHeaderView)  {
+        let acad = AcadamyDetailViewModel()
+        if let imageName = pho?.photoImage {
+            let url = TTAppConstant.UrlConstant.baseUrl+TTAppConstant.UrlConstant.categoryAPI+imageName
+            acad.downloadImage(url: url) { [self] (response) in
+                if let data = response as? Data{
+//                    DispatchQueue.main.async {
+//                        imageView.image = UIImage(named: "banner1.png")
+//                    }
+                }
+            }
+        }
     }
 }
 

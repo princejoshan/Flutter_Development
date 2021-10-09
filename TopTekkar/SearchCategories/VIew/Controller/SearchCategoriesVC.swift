@@ -26,7 +26,7 @@ class SearchCategoriesVC: UIViewController {
     
     
     func callToViewModelForUIUpdate(){
-        
+        self.view.showLoader()
         self.searchViewModel =  SearchCategoriesViewModel()
         self.searchViewModel.fetchData()
         self.searchViewModel.bindingData = {
@@ -34,6 +34,8 @@ class SearchCategoriesVC: UIViewController {
                 self.category = self.searchViewModel.categoryData
                 DispatchQueue.main.async {
                     self.searchCategoryCollectionView.reloadData()
+                    self.view.hideLoader()
+
                 }
             }
         }
