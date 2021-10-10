@@ -150,20 +150,26 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
     
     func getSportsDetails() {
 //        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
+//        self.view.showLoader()
         let populatedDictionary = ["bus_id": (self.acadamyDetails?.busID)!]
         self.acadamyGetSportsViewModel.callSportsDataService(reqParam: populatedDictionary)
         self.acadamyGetSportsViewModel.bindingData = {
             if self.acadamyGetSportsViewModel.AcadamySportsDetails != nil{
                 self.acadamySportsDetails = self.acadamyGetSportsViewModel.AcadamySportsDetails
                 DispatchQueue.main.async {
+                    //self.view.hideLoader()
+
                 self.sportsCollctionView.reloadData()
+
                 }
+
             }
         }
     }
     
     func getAcadamyPhotosDetails() {
 //        self.acadamyDetailViewModel =  AcadamyDetailViewModel()
+//        self.view.showLoader()
         let populatedDictionary = ["bus_id": (self.acadamyDetails?.busID)!]
         self.acadamyDetailViewModel.callAcadamyPhotoDataService(reqParam: populatedDictionary)
         self.acadamyDetailViewModel.bindingAcadamyPhotoDetails = {
@@ -175,6 +181,7 @@ class AcadamyDetailsViewController: UIViewController,UIScrollViewDelegate {
                 if ((arr?.count ?? 0) != 0) {
                     self.parallaxViewFrame.updateImage(pho: arr![0], par: self.parallaxViewFrame)
                 }
+//                self.view.hideLoader()
             }
         }
     }

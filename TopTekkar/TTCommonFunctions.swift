@@ -43,7 +43,7 @@ extension UIView {
         container.frame = CGRect(x: 0, y: 0, width: 80, height: 80) // Set X and Y whatever you want
         container.backgroundColor = .clear
 
-        let activityView = UIActivityIndicatorView(style: .large)
+        let activityView = UIActivityIndicatorView(style: .medium)
         activityView.center = self.center
 
         container.addSubview(activityView)
@@ -53,6 +53,14 @@ extension UIView {
 
     func hideLoader()  {
         self.viewWithTag(1)?.removeFromSuperview()
+    }
+    
+    func shadowEffect() {
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 10.0
+        self.layer.masksToBounds = false
     }
     
 }
